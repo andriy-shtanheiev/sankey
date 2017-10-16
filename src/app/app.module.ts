@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { SankeyDiagramComponent } from './sankey-diagram.component';
+import { SankeyDataService } from './sankey-data.service';
+import { D3Service } from 'd3-ng2-service';
 
 @NgModule({
   declarations: [
@@ -10,9 +14,10 @@ import { SankeyDiagramComponent } from './sankey-diagram.component';
     SankeyDiagramComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [D3Service, SankeyDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,80 @@
+{
+    "nodes": [
+      {
+        "id": "1",
+        "name": "Start of Day"
+      },
+      {
+        "id": "2",
+        "name": "Transaction Close"
+      },
+      {
+        "id": "3",
+        "name": "Valuation Close"
+      },
+      {
+        "id": "4",
+        "name": "Audit Close"
+      },
+      {
+        "id": "5",
+        "name": "Processing"
+      },
+      {
+        "id": "6",
+        "name": "In Repair"
+      },
+      {
+        "id": "7",
+        "name": "Dissemination Close"
+      }
+    ],
+    "links": [
+      {
+        "source": "1",
+        "target": "2",
+        "value": 100
+      },
+      {
+        "source": "2",
+        "target": "3",
+        "value": 68
+      },
+      {
+        "source": "2",
+        "target": "5",
+        "value": 20
+      },
+      {
+        "source": "2",
+        "target": "6",
+        "value": 8
+      },
+      {
+        "source": "3",
+        "target": "4",
+        "value": 46
+      },
+      {
+        "source": "3",
+        "target": "5",
+        "value": 14
+      },
+      {
+        "source": "3",
+        "target": "6",
+        "value": 5
+      },
+      {
+        "source": "4",
+        "target": "6",
+        "value": 2
+      },
+      {
+        "source": "4",
+        "target": "7",
+        "value": 35
+      }
+    ],
+    "alignLinkTypes": true
+  }
